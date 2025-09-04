@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIRKAUFENDINESCHWESTER.DE - Wir kaufen deine Schwester!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <h1 class="text-xl md:text-2xl font-bold text-gray-900">
+                <a href="#" class="text-red-500">WIRKAUFEND<span class="text-gray-900">EINESCHWESTER.DE</span></a>
+            </h1>
+            <nav>
+                <a href="https://www.wirkaufendeinauto.de" target="_blank" class="text-sm font-medium text-gray-600 hover:text-red-500 transition-colors">zum Original</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center py-12 px-4">
+        <div class="bg-white rounded-xl shadow-lg p-6 md:p-10 w-full max-w-lg text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
+                Wir kaufen deine Schwester!
+            </h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+                Schnell, einfach und zum besten Preis.
+            </p>
+
+            <form id="sister-form" class="space-y-6">
+                <div>
+                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors" placeholder="Name der Schwester" required>
+                </div>
+                <div>
+                    <input type="number" id="birthyear" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors" placeholder="Baujahr" min="1900" max="2025" required>
+                </div>
+                <div>
+                    <select id="condition" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors" required>
+                        <option value="">Zustand wählen</option>
+                        <option value="good">Gut gepflegt, mit viel Zubehör</option>
+                        <option value="fair">Gebrauchsspuren vorhanden</option>
+                        <option value="urgent">Dringend abzugeben (Nervfaktor zu hoch)</option>
+                        <option value="vintage">Wenig benutzt (hatte eigene Pläne)</option>
+                    </select>
+                </div>
+                <div>
+                    <textarea id="features" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors h-24" placeholder="Besondere Merkmale (z.B. talentierte Streitsuchende, professionelle Fernbedienungsversteckerin)"></textarea>
+                </div>
+                
+                <button type="button" onclick="showJoke()" class="w-full bg-red-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-red-600 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                    Schwester jetzt schätzen lassen
+                </button>
+            </form>
+
+            <div id="joke-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden z-50">
+                <div class="bg-white rounded-lg p-8 m-4 max-w-sm text-center shadow-2xl">
+                    <p id="joke-text" class="text-xl md:text-2xl font-bold text-gray-800">
+                        Deine Schwester ist unbezahlbar! Wir machen Spaß. Wir haben nur Lappen.
+                    </p>
+                    <button onclick="closeModal()" class="mt-6 bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition-colors">
+                        OK, verstanden
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 py-6 mt-auto">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Wirkaufendeineschwester.de. Ein Projekt mit einem Augenzwinkern.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
